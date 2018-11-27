@@ -1,21 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, FormBuilder ,Validators} from '@angular/forms';
 import {SelectItem} from 'primeng/api';
+import { category } from '../models/categories.interface'
+import { listItem } from '../models/listItem.interface'
 
 
-interface category {
-  id: number,
-  name: string
-}
-
-interface listItem {
-  taskId : number,
-  title :string,
-  description:string,
-  dueDate:Date,
-  tags?:string,
-  catId:number;
-}
 
 @Component({
   selector: 'app-home',
@@ -64,12 +53,12 @@ export class HomeComponent implements OnInit {
     ];
 
     this.toDoArr  = [
-      {taskId:2, title:"DOOO",description:"dsfsfsdf",dueDate:new Date(),tags:'',catId:1  },
-      {taskId:1, title:"Eat",description:"dsfsfsdf",dueDate:new Date(),tags:'',catId:2  },
-      {taskId:3, title:"Sport",description:"dsfsfsdf",dueDate:new Date(),tags:'',catId:3  },
-      {taskId:5, title:"DOOO2",description:"dsfsfsdf",dueDate:new Date(),tags:'',catId:1  },
-      {taskId:6, title:"Eat2",description:"dsfsfsdf",dueDate:new Date(),tags:'',catId:2  },
-      {taskId:4, title:"Sport2",description:"dsfsfsdf",dueDate:new Date(),tags:'',catId:3  },
+      {taskId:2, title:"DOOO",description:"DOOO description",dueDate:new Date(),tags:'',catId:1  },
+      {taskId:1, title:"Eat",description:"Eat description",dueDate:new Date(),tags:'',catId:2  },
+      {taskId:3, title:"Sport",description:"Sport description",dueDate:new Date(),tags:'',catId:3  },
+      {taskId:5, title:"DOOO2",description:"DOOO2 description",dueDate:new Date(),tags:'',catId:1  },
+      {taskId:6, title:"Eat2",description:"Eat2 description",dueDate:new Date(),tags:'',catId:2  },
+      {taskId:4, title:"Sport2",description:"Sport2 description",dueDate:new Date(),tags:'',catId:3  },
    ];
   }
 
